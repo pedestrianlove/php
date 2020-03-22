@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>u105021226's Website</title>
+	<link rel="shortcut icon" href="https://learn.math.nthu.edu.tw/math172/theme/e-learning-portal/favicon.ico" />
 </head>
 
 
