@@ -7,9 +7,11 @@
 	$b = $_GET["b"];
 
 	// COMPUTE && OUTPUT
-	if ($a < $b)
+	if ($a > $b)
 		printf ("%d 大於 %d <br />", $a, $b);
-	else
+	elseif ($a < $b)
 		printf ("%d 小於 %d <br />", $a, $b);
+	else
+		printf ("%d 等於 %d <br />", $a, $b);
 
 ?>

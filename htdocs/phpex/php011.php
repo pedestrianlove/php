@@ -7,9 +7,16 @@
 
 	// COMPUTE && OUTPUT
 	$flag = 1;
-	for ($i = 0; $i < n; $i++, $flag++) {
-		printf ("%d &nbsp;", $i);
-		if ($flag % 10 == 0)
+
+	printf ("<pre>");
+	for ($i = 1; $i <= $n; $i++) {
+		printf ("%4d&nbsp", $i);
+		$flag++;
+		if ($flag % 10 == 1) {
 			printf ("<br />");
+			$flag=1;
+		}
+		
 	}
+	printf ("</pre>");
 ?>

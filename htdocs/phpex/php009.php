@@ -7,8 +7,8 @@
 
 	// COMPUTE && OUTPUT
 	if ($a % 2 == 0)
-		printf ("%d 是偶數 <br />");
+		printf ("%d 是偶數 <br />", $a);
 	else
-		printf ("%d 是奇數 <br />");
+		printf ("%d 是奇數 <br />", $a);
 
 ?>
