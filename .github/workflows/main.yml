@@ -16,5 +16,5 @@ jobs:
         FTP_PASSWORD:	${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR:	u105021226.22web.org/htdocs
         LOCAL_DIR:	htdocs
-        ARGS: --verbose --delete
+        ARGS: --verbose --parallel=10 --delete
         # --delete arg will delete files on the server if you've deleted them in git
