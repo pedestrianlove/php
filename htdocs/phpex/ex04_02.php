@@ -14,7 +14,7 @@
 			$GRADE = $_POST[GRADE];
 
 			// CLASSIFY
-			printf ("等第為")
+			printf ("等第為");
 			if ($GRADE >= 80  &&  $GRADE <= 100)
 				printf ("A");
 			elseif ($GRADE >= 70)
