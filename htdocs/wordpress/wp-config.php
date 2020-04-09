@@ -16,13 +16,13 @@
 
 // ** MySQL 設定 - 您可以從主機服務提供商獲取相關資訊。 ** //
 /** WordPress 的資料庫名稱，請更改 "database_name_here" */
-define( 'DB_NAME', '${{DB_NAME}}' );
+define( 'DB_NAME', 'b13_25362198_wordpress' );
 
 /** MySQL 資料庫使用者名稱，請更改 "username_here" */
-define( 'DB_USER', '${{DB_USER}}' );
+define( 'DB_USER', 'b13_25362198' );
 
 /** MySQL 資料庫密碼，請更改 "password_here" */
-define( 'DB_PASSWORD', '${{DB_PASSWORD}}' );
+define( 'DB_PASSWORD', 'joyce0920' );
 
 /** MySQL 主機位址 */
 define( 'DB_HOST', 'sql205.byethost13.com' );
