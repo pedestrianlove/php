@@ -21,7 +21,7 @@
 <?php
    if(isset ($_POST['send'])){ 
       if($_POST["password1"]<>$_POST["password2"]){
-         header('Refresh:3;url=form04t.html');
+         header('Refresh:3;url=ex04_07.php');
          exit("兩次密碼不一致，請重新填寫！");} ?>
       <p><B>目前註冊的會員資料如下：<B><p><table border=1>
       <tr><td>會員名稱<td> <?php echo $_POST["username"]; ?>
