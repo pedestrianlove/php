@@ -15,6 +15,6 @@ jobs:
         FTP_USERNAME:	${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD:	${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR:	u105021226.22web.org/htdocs
-        LOCAL_DIR:	htdocs/phpex
-        ARGS: --verbose --parallel=19 --delete
+        LOCAL_DIR:	htdocs
+        ARGS: --verbose --parallel=19
         # --delete arg will delete files on the server if you've deleted them in git
