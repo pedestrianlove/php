@@ -7,5 +7,5 @@
 	
 	// FLOW
 	for ($i = -10; $i <= 10; $i++) 
-		printf ("%f ".PHP_EOL, Celsius2Fahrenheit ($i));
+		printf ("%.2f <br />".PHP_EOL, Celsius2Fahrenheit ($i));
 ?>

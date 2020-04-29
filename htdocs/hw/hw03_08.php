@@ -19,5 +19,5 @@
 
 	// output
 	foreach ($string_array as $substring)
-		printf ("%s".PHP_EOL, $substring);
+		printf ("%s <br />".PHP_EOL, $substring);
 ?>

@@ -1,8 +1,8 @@
 <html>
 <body>
 <form method="post" action="hw03_05.php">
-	分別輸入兩正整數m,n：
-	<input name="m" type = "text">
+	分別輸入兩正整數：
+	<input name="m" type = "text"> <br />
 	<input name="n" type = "text"> <br />
 	<input type="submit" value="送出資料" name="send">
 </form>
@@ -35,5 +35,6 @@
 	// FLOW
 	$gcd = gcd ($m, $n);
 	$lcm = $gcd*($m/$gcd)*($n/$gcd);
+	printf ("您分別輸入了%d和%d <br />".PHP_EOL);
 	printf ("(GCD, LCM) = (%4d, %4d)".PHP_EOL, $gcd, $lcm);
 ?>

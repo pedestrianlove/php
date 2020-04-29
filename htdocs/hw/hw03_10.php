@@ -18,8 +18,8 @@
 	printf ("成  績\t學生人數".PHP_EOL);
 	for ($i = 9; $i >=0; $i--) {
 		if ($i == 9)
-			printf ("%3d~%2d\t%d".PHP_EOL, 100, 90, $grade_dist[$i]);
+			printf ("%3d~%2d &#9; %d <br />".PHP_EOL, 100, 90, $grade_dist[$i]);
 		else
-			printf ("%3d~%2d\t%d".PHP_EOL, $i*10+9, $i*10, $grade_dist[$i]);
+			printf ("%3d~%2d &#9; %d <br />".PHP_EOL, $i*10+9, $i*10, $grade_dist[$i]);
 	}
 ?>

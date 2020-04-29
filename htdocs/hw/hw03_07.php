@@ -25,7 +25,7 @@
 	$rate_bk = $rate;
 	printf ("年份\t本利和".PHP_EOL);
 	for ($i = 1;; $rate*=$rate_bk, $i++) {
-		printf ("%d\t%f".PHP_EOL, $i, $base*$rate);
+		printf ("%d &#9; %f <br />".PHP_EOL, $i, $base*$rate);
 		if ($rate >= 2)
 			break;
 	}
