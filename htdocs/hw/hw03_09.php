@@ -13,7 +13,7 @@
 	{
 		$alphabet = range('A', 'Z');
 		$index = array_search ($char, $alphabet);
-		$index = ($index+7)%26;
+		$index = ($index+10)%26;
 		
 		return $alphabet[$index];
 	}
