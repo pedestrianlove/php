@@ -1,8 +1,25 @@
+<html>
+<body>
+<form method="post" action="hw03_02.php">
+	選擇形狀：
+	<input name = "TYPE" type = "radio" VALUE = "a">Z
+	<input name = "TYPE" type = "radio" VALUE = "b">A
+	<input name = "TYPE" type = "radio" VALUE = "c">X
+	<input name = "TYPE" type = "radio" VALUE = "d">V
+	<input name = "TYPE" type = "radio" VALUE = "e">N <br />
+	輸入大小(5<=N<100)：
+	<input name="SIZE" type = "text"> <br />
+	<input type="submit" value="送出資料" name="send">
+</form>
+</fieldset>
+</body>
+</html>
+
 <?php
 	// INPUT
-	if (isset ($argv[1]) && isset ($argv[2])) {
-		$TYPE = $argv[1];
-		$SIZE = $argv[2];
+	if (isset ($_POST["send"])) {
+		$TYPE = $_POST["TYPE"];
+		$SIZE = $_POST["SIZE"];
 	}
 	else
 		throw new Exception ("CHECK YOUR INPUT".PHP_EOL);

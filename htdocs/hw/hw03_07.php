@@ -1,8 +1,19 @@
+<html>
+<body>
+<form method="post" action="hw03_07.php">
+	請輸入本金：
+	<input name="base" type = "text"> <br />
+	請輸入年利：
+	<input name="rate" type = "text"> <br />
+	<input type="submit" value="送出資料" name="send">
+</form>
+</fieldset>
+</body>
 <?php
 	// GET INPUT
-	if (isset($argv[1]) && isset($argv[2])) {
-		$base = $argv[1];
-		$rate = (float)$argv[2];
+	if (isset($_POST["send"])) {
+		$base = $_POST["base"];
+		$rate = (float)$_POST["rate"];
 	}
 	else
 		throw new Exception ("CHECK YOUR INPUT".PHP_EOL);

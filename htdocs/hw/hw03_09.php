@@ -1,3 +1,13 @@
+<html>
+<body>
+<form method="post" action="hw03_09.php">
+	請輸入密碼：
+	<input name="string" type = "text"> <br />
+	<input type="submit" value="送出資料" name="send">
+</form>
+</fieldset>
+</body>
+
 <?php
 	function decrypt ($char)
 	{
@@ -9,8 +19,8 @@
 	}
 
 	// INPUT
-	if (isset ($argv[1]))
-		$original_string = $argv[1];
+	if (isset ($_POST["send"]))
+		$original_string = $_POST["string"];
 	else
 		throw new Exception ("CHECK YOUR INPUT".PHP_EOL);
 

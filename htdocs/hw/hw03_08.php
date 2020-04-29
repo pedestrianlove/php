@@ -1,7 +1,16 @@
+<html>
+<body>
+<form method="post" action="hw03_08.php">
+	請輸入字串：
+	<input name="string" type = "text"> <br />
+	<input type="submit" value="送出資料" name="send">
+</form>
+</fieldset>
+</body>
 <?php
 	// input
-	if (isset($argv[1]))
-		$string_input = $argv[1];
+	if (isset($_POST["send"]))
+		$string_input = $_POST["string"];
 	else
 		throw new Exception ("WATCH YOUR INPUT".PHP_EOL);
 
