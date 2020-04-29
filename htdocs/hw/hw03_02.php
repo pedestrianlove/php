@@ -33,7 +33,7 @@
 					else
 						printf (" ");
 				}
-				printf ("<br />");
+				printf ("<br />".PHP_EOL);
 			}
 			break;
 		case 'b':
@@ -46,7 +46,7 @@
 						printf (" ");
 					
 				}
-				printf ("<br />");
+				printf ("<br />".PHP_EOL);
 			}
 
 			break;
@@ -58,7 +58,7 @@
 					else
 						printf (" ");
 				}
-				printf ("<br />");
+				printf ("<br />".PHP_EOL);
 			}
 
 			break;
@@ -70,7 +70,7 @@
 					else
 						printf (" ");
 				}
-				printf ("<br />");
+				printf ("<br />".PHP_EOL);
 			}
 			break;
 		case 'e':
@@ -81,7 +81,7 @@
 					else
 						printf (" ");
 				}
-				printf ("<br />");
+				printf ("<br />".PHP_EOL);
 			}
 			break;
 		default:
