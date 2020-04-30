@@ -1,6 +1,6 @@
 
 <?php
-	if($_SERVER['PHP_AUTH_USER'] !='php' || $_SERVER['PHP_AUTH_PW'] !='source'){
+	if($_SERVER['PHP_AUTH_USER'] !='php' || $_SERVER['PHP_AUTH_PW'] !='text'){
       		header('WWW-Authenticate: Basic realm="Restricted Area"');
      		header('HTTP/1.0 401 Unauthorized');
       		echo "請輸入正確的帳號與密碼，不可以取消！";
