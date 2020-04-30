@@ -10,7 +10,6 @@
 	include ("counter_g.inc");
 	
 ?>
-<img src="https://math172.ddns.net/rain02cms.gif" border=0>
 
 <html>
 <head>
