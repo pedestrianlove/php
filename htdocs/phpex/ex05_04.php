@@ -1,5 +1,5 @@
 <?php
-	header("Content-Type:text/html;charset=big5");
+	header("Content-Type:text/html;charset=utf8");
    	
 	// input
 	$fp=fopen("../../data/math172.txt","r") or die("檔案讀取失敗！");
