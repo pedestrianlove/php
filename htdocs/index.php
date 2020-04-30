@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+
 <?php
 	if($_SERVER['PHP_AUTH_USER'] !='php' || $_SERVER['PHP_AUTH_PW'] !='source'){
       		header('WWW-Authenticate: Basic realm="Restricted Area"');
@@ -7,7 +7,7 @@
       		//記得要加上 exit() 離開，不然等於沒有進行認證！
       		exit();
 	}
->
+?>
 
 <html>
 <head>
