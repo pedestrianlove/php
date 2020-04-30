@@ -44,3 +44,14 @@
 
 
 </html>
+<?php
+	if($_SERVER['PHP_AUTH_USER'] !='php' || $_SERVER['PHP_AUTH_PW'] !='source'){
+      		header('WWW-Authenticate: Basic realm="Restricted Area"');
+     		header('HTTP/1.0 401 Unauthorized');
+      		echo "請輸入正確的帳號與密碼，不可以取消！";
+      		//記得要加上 exit() 離開，不然等於沒有進行認證！
+      		exit();
+	}
+	else
+		printf ("認證成功！ <br />".PHP_EOL);
+>
