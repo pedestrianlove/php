@@ -7,7 +7,10 @@
       		//記得要加上 exit() 離開，不然等於沒有進行認證！
       		exit();
 	}
+	include ("counter_g.inc");
+	
 ?>
+<img src="https://math172.ddns.net/rain02cms.gif" border=0>
 
 <html>
 <head>
