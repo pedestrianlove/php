@@ -2,8 +2,7 @@
 	header("Content-Type:text/html;charset=utf8");
    	
 	// input
-	$file_str = file_get_contents("http://math172.ddns.net/phpex/score.dat") or die("檔案讀取失敗！");
-	$score = explode (PHP_EOL, $file_str);
+	$score = file("http://math172.ddns.net/phpex/score.dat") or die("檔案讀取失敗！");
    
 	// output
 	// list out the grade
