@@ -1,7 +1,7 @@
 <?php
 	function day_conv ($day) {
 		switch ($day) {
-			case 0: return "天";
+			case 7: return "天";
 			case 1: return "一";
 			case 2: return "二";
 			case 3: return "三";
