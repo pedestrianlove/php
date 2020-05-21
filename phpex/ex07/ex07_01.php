@@ -20,7 +20,7 @@
       </table>
    <?php
    //指定寫入檔案的名稱，確記存放位置不要在「網站根目錄內」
-   $filename = "../../data/member.txt";
+   $filename = "../../../data/member.txt";
    $handle = fopen($filename, "a") or die("$filename 開啟檔案失敗！");
    //指定寫入檔案的內容，包括換行符號
    $contents .= $_POST["cn"]." ";
