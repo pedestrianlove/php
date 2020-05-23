@@ -11,10 +11,10 @@
 	
   function execute_sql($db_name, $sql_command, $sql_link)
   {
-    $db_selected = mysqli_select_db($db_name, $sql_link)
+    $db_selected = mysqli_select_db($sql_link, $db_name)
       or die("開啟資料庫失敗<br /><br />" . mysqli_error($sql_link));
 						 
-    $result = mysqli_query($sql_command, $sql_link);
+    $result = mysqli_query($sql_link, $sql_command);
 		
     return $result;
   }
