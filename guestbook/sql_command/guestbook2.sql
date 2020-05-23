@@ -13,8 +13,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- 資料庫: `guestbook2`
 -- 
 -- CREATE DATABASE `guestbook` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `b13_25362198_guestbook`;
-
+-- USE `b13_25362198_guestbook`;
+USE `tryDB`;
 -- --------------------------------------------------------
 
 -- 
