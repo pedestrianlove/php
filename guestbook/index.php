@@ -21,7 +21,7 @@
     <?php
       require_once("src/index_action.php");
     ?>
-    <form name="myForm" method="post" action="post.php">
+    <form name="myForm" method="post" action="src/post.php">
       <table border="0" width="800" align="center" cellspacing="0">
         <tr bgcolor="#0084CA" align="center">
           <td colspan="2">
