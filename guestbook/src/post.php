@@ -12,7 +12,7 @@
   //執行 SQL 命令
   $sql = "INSERT INTO message(author, subject, content, date)
           VALUES('$author', '$subject', '$content', '$current_time')";
-  $result = execute_sql("tryDB", $sql, $link);
+  $result = execute_sql("b13_25362198_guestbook", $sql, $link);
 
   //關閉資料連接
   mysqli_close($link);

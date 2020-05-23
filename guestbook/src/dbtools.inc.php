@@ -1,11 +1,10 @@
 <?php
   function create_connection()
   {
-    $link = mysqli_connect("learn.math.nthu.edu.tw", "dbuser", "try.123#T", "tryDB")
+    $link = mysqli_connect("sql205.byethost.com", "b13_25362198", "joyce0920", "b13_25362198_guestbook")
       or die("無法建立資料連接<br /><br />" . mysqli_error());
 	  
     mysqli_query("SET NAMES 'utf8'");
-    echo "Created database connection successifully.";
 			   	
     return $link;
   }

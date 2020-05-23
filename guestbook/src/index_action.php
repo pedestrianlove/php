@@ -15,7 +15,7 @@
 			
       //執行 SQL 命令
       $sql_command = "SELECT * FROM message ORDER BY date DESC";	
-      $result = execute_sql("tryDB", $sql_command, $sql_link);
+      $result = execute_sql("b13_25362198_guestbook", $sql_command, $sql_link);
 
       //取得記錄數
       $total_records = mysqli_num_rows($result);
