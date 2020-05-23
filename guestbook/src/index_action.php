@@ -44,7 +44,7 @@
       {
         echo "<tr bgcolor='" . $bg[$j - 1] . "'>";
         echo "<td width='120' align='center'>
-              <img src='../img/" . mt_rand(0, 9) . ".gif'></td>";
+              <img src='img/" . mt_rand(0, 9) . ".gif'></td>";
         echo "<td>作者：" . $row["author"] . "<br>";
         echo "主題：" . $row["subject"] . "<br>";
         echo "時間：" . $row["date"] . "<hr>";

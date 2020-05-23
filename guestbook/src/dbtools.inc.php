@@ -4,7 +4,7 @@
     $link = mysqli_connect("sql205.byethost.com", "b13_25362198", "joyce0920", "b13_25362198_guestbook")
       or die("無法建立資料連接<br /><br />" . mysqli_error());
 	  
-    mysqli_query("SET NAMES 'utf8'");
+    mysqli_query($link, "SET NAMES 'utf8'");
 			   	
     return $link;
   }
