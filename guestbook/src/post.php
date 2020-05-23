@@ -12,10 +12,10 @@
   //執行 SQL 命令
   $sql = "INSERT INTO message(author, subject, content, date)
           VALUES('$author', '$subject', '$content', '$current_time')";
-  $result = execute_sql("guestbook", $sql, $link);
+  $result = execute_sql("b13_25362198_guestbook", $sql, $link);
 
   //關閉資料連接
-  mysql_close($link);
+  mysqli_close($link);
 
   //將網頁重新導向到 index.php
   header("location:index.php");
