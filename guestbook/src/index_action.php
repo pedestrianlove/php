@@ -73,6 +73,6 @@
 
       //釋放記憶體空間
       mysqli_free_result($result);
-      mysqli_close($link);
+      mysqli_close($sql_link);
     ?>
 
