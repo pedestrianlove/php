@@ -78,11 +78,11 @@
 
 			// merge
 			$result = merge ($front_arr, $end_arr);
-			print_Array ($result);
+			printArray ($result);
 			return $result;
 	
 		}
-		print_Array (array ($arr[$front]));
+		printArray (array ($arr[$front]));
 		return array ($arr[$front]);
 	}
 
