@@ -33,8 +33,7 @@
 	function insert (&$arr, $insert_position, $element) {
 		$arr_front = array_slice ($arr, 0, $insert_position);
 		$arr_end = array_slice ($arr, $insert_position+1, sizeof ($arr)-1);
-		print_r ($arr_front);
-		print_r ($arr_end);	
+		
 		$arr = array_push ($arr_front, $element);
 		$arr = array_merge ($arr_front, $arr_end);
 		
