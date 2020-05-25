@@ -82,8 +82,9 @@
 			return $result;
 	
 		}
-		printArray (array ($arr[$front]));
-		return array ($arr[$front]);
+		$result = array ($arr[$front]);
+		printArray ($result);
+		return $result;
 	}
 
     
