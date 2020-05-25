@@ -11,7 +11,7 @@
 	{ 
     		for ($i = 0; $i < sizeof ($arr); $i++) 
         		echo $arr[$i]." "; 
-    		echo PHP_EOL; 
+    		echo "<br />"; 
 	} 
 	function swap(&$x,&$y){
         	$tmp = $x;
