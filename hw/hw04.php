@@ -40,7 +40,7 @@
 				if ($arr[$i] > $arr_sorted[$j]) {
 					array_splice( $arr_sorted, $j+1, 0, array($arr[$i]) );
 					echo "第".++$counter."輪: ";
-					printArray ($arr);
+					printArray ($arr_sorted);
 				      	break;	
 				}
 			}
