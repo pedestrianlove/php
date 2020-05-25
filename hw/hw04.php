@@ -30,6 +30,14 @@
 		}
 		return $arr;
 	}
+	function insert (&$arr, $insert_position, $element) {
+		$arr_front = array_slice ($arr, 0, $insert_position);
+		$arr_end = array_slice ($arr, $insert_position+1, sizeof ($arr)-1);
+		
+		$arr = array_merge ($arr_front, array($element));
+		$arr = array_merge ($arr, $arr_end);
+		
+	}
     
 	// Sorting Algorithms
     	function insertion_sort(&$arr){
@@ -38,7 +46,7 @@
 		for ($i = 1; $i < sizeof ($arr); $i++) {
 			for ($j = 0; $j < $i; $j ++) {
 				if ($arr[$i] > $arr_sorted[$j]) {
-					array_splice( $arr_sorted, $j+1, 0, array($arr[$i]) );
+					insert ( $arr_sorted, $j, $arr[$i]);
 					echo "第".++$counter."輪: ";
 					printArray ($arr_sorted);
 				      	break;	
