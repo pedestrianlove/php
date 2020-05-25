@@ -10,7 +10,7 @@
 	function printArray(&$arr) 
 	{ 
     		for ($i = 0; $i < sizeof ($arr); $i++) 
-        		echo $arr[$i]." "; 
+        		echo " ".$arr[$i]." "; 
     		echo "<br />"; 
 	} 
 	function swap(&$x,&$y){
