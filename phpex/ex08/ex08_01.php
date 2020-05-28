@@ -1,5 +1,7 @@
 <?php
-	header ("Content-Type: text/html")
+	// headers
+	header ("Content-Type:text/html; charset=utf-8");
+
 	// init link
     	$sql_link = mysqli_connect("learn.math.nthu.edu.tw", "dbuser", "try.123#T", "tryDB")
 		or die("無法建立資料連接<br /><br />" . mysqli_error());
