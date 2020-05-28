@@ -7,7 +7,7 @@ if (preg_match("/WIN/i",PHP_OS)) {
 	$sep = "/";
 }
 
-if (!preg_match("/^5\./",PHP_VERSION)) {
+if (preg_match("/^5\./",PHP_VERSION)) {
     echo "<html><body><h2>This script requires PHP 5 or higher!</h2></body></html>";
     exit();
 }
