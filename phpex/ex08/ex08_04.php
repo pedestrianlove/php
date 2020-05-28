@@ -25,7 +25,7 @@
   	$current_time = date("Y-m-d H:i:s");
 
   	// insert data
-	$sql_command = "INSERT INTO message(course_name, username, password, email, date)
+	$sql_command = "INSERT INTO member(course_name, username, password, email, date)
 		VALUES('$course_name', '$username', '$password', '$email', '$current_time')";
 	$result = mysqli_query ($sql_link, $sql_command);
 	
