@@ -1,7 +1,7 @@
 <?php
 /* database settings */
 $GB_DB = array();
-$GB_DB["dbName"] = "guestbook_adv";
+$GB_DB["dbName"] = "guestbook2";
 $GB_DB["host"]   = "localhost";
 $GB_DB["user"]   = "root";
 $GB_DB["pass"]   = "math.315";
