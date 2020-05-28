@@ -3,7 +3,7 @@
 	header ("Content-Type:text/html; charset=utf-8");
 
 	// init link
-    	$sql_link = mysqli_connect("u105021226.ddns.net", "root", "math.315", "tryDB")
+    	$sql_link = mysqli_connect("localhost", "root", "math.315", "tryDB")
 		or die("無法建立資料連接<br /><br />" . mysqli_error());
 	mysqli_query ($sql_link, "SET NAMES 'utf8'");
 
