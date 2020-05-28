@@ -14,6 +14,7 @@
 	
 
 	// output result
+	echo "Records of data =".mysqli_num_rows ($result).PHP_EOL;
 	echo "<table border='3'>";
 	while ($row = mysqli_fetch_assoc ($result)) {
 		echo "<tr>";
