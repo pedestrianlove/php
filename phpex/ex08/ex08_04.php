@@ -28,7 +28,7 @@
 
   	// insert data
 	$sql_command = "INSERT INTO member (course_name, username, password, email)
-		VALUES ('$course_name', '$username', '$password', '$email');";
+		VALUES ('$course_name', '$username', '$password', '$email')";
 	$result = mysqli_query ($sql_link, $sql_command);
 
 	mysqli_close ($sql_link);
