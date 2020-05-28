@@ -27,19 +27,19 @@ class gbook_sql {
     }
 
     function connect() {
-        $this->conn_id = mysql_connect($this->db['host'].":".$this->port,$this->db['user'],$this->db['pass']);
+        $this->conn_id = mysqli_connect($this->db['host'].":".$this->port,$this->db['user'],$this->db['pass'], $this->db['dbName']);
         if ($this->conn_id == 0) {
             $this->sql_error("Connection Error");
         }
-        if (!mysql_select_db($this->db['dbName'], $this->conn_id)) {
+        if (!mysqli_select_db($this->conn_id, $this->db['dbName'])) {
             $this->sql_error("Database Error");
         }
-        mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
+        mysqli_query($this->conn_id, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
         return $this->conn_id;
     }
 
     function query($query_string) {
-        $this->result = mysql_query($query_string,$this->conn_id);
+        $this->result = mysqli_query($this->conn_id, $query_string);
         if (!$this->result) {
             $this->sql_error("Query Error");
         }
@@ -47,29 +47,29 @@ class gbook_sql {
     }
 
     function fetch_array($query_id) {
-        $this->record = mysql_fetch_array($query_id,MYSQL_ASSOC);
+        $this->record = mysqli_fetch_array($query_id,MYSQL_ASSOC);
         return $this->record;
     }
 
     function num_rows($query_id) {
-        return ($query_id) ? mysql_num_rows($query_id) : 0;
+        return ($query_id) ? mysqli_num_rows($query_id) : 0;
     }
 
     function num_fields($query_id) {
-        return ($query_id) ? mysql_num_fields($query_id) : 0;
+        return ($query_id) ? mysqli_num_fields($query_id) : 0;
     }
 
     function free_result($query_id) {
-        return mysql_free_result($query_id);
+        return mysqli_free_result($query_id);
     }
 
     function affected_rows() {
-        return mysql_affected_rows($this->conn_id);
+        return mysqli_affected_rows($this->conn_id);
     }
 
     function close_db() {
         if($this->conn_id) {
-            return mysql_close($this->conn_id);
+            return mysqli_close($this->conn_id);
         } else {
             return false;
         }
@@ -77,8 +77,8 @@ class gbook_sql {
 
     function sql_error($message) {
         global $TEC_MAIL;
-        $description = mysql_error();
-        $number = mysql_errno();
+        $description = mysqli_error();
+        $number = mysqli_errno();
         $error ="MySQL Error : $message\n";
         $error.="Error Number: $number $description\n";
         $error.="Date        : ".date("D, F j, Y H:i:s")."\n";
