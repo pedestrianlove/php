@@ -23,11 +23,11 @@ USE `tryDB`;
 
 CREATE TABLE `member` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
-  `course_name` varchar(50) NOT NULL DEFAULT '',
+  `course_name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
