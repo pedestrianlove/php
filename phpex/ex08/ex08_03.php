@@ -3,7 +3,7 @@
 	header ("Content-Type:text/html; charset=utf-8");
 
 	// init link
-    	$sql_link = mysqli_connect("learn.math.nthu.edu.tw", "dbuser", "try.123#T", "tryDB")
+    	$sql_link = mysqli_connect("u105021226.ddns.net", "root", "math.315", "tryDB")
 		or die("無法建立資料連接<br /><br />" . mysqli_error());
 	mysqli_query ($sql_link, "SET NAMES 'utf8'");
 
@@ -15,6 +15,13 @@
 
 	// output result
 	echo "<table border='3'>";
+		echo "<tr>";
+		echo "<td>"."id"."</td>";
+		echo "<td>"."name"."</td>";
+		echo "<td>"."phone"."</td>";
+		echo "<td>"."address"."</td>";
+		echo "<td>"."birthday"."</td>";
+		echo "</tr>";
 	while ($row = mysqli_fetch_assoc ($result)) {
 		echo "<tr>";
 		echo "<td>".$row["id"]."</td>";
