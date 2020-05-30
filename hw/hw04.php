@@ -7,8 +7,9 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	// Utility
-	function printArray(&$arr) 
+	function printArray(&$arr, &$time) 
 	{ 
+		echo "第".++$time."輪: ";
     		for ($i = 0; $i < sizeof ($arr); $i++) 
         		echo " ".$arr[$i]." "; 
     		echo "<br />"; 
@@ -47,8 +48,7 @@
 			for ($j = 0; $j < $i; $j ++) {
 				if ($arr[$i] > $arr_sorted[$j]) {
 					insert ( $arr_sorted, $j, $arr[$i]);
-					echo "第".++$counter."輪: ";
-					printArray ($arr_sorted);
+					printArray ($arr_sorted, $counter);
 				      	break;	
 				}
 			}
@@ -61,8 +61,7 @@
 			for ($j = 0; $j < sizeof ($arr)-$i-1; $j ++) {
 				if ($arr[$j] > $arr[$j+1]) {
 					swap ($arr[$j], $arr[$j+1]);
-					echo "第".++$counter."輪: ";
-					printArray ($arr);
+					printArray ($arr, $counter);
 				}
 			}
 		}
