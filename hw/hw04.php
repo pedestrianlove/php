@@ -46,6 +46,12 @@
 					printArray ($arr_sorted, $counter);
 				      	break;	
 				}
+				if ($arr[$i] > $arr_sorted[$j]) {
+					insert ( $arr_sorted, $j, $arr[$i]);
+					printArray ($arr_sorted, $counter);
+				      	break;	
+				}
+
 			}
 		}
 	}
