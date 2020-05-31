@@ -5,6 +5,7 @@
 <INPUT type="reset" value="重新輸入"></p>
 </form>
 <?php
+	global $merge_counter;
 	header("Content-Type:text/html;charset=utf-8");
 	// Utility
 	function printArray(&$arr, &$time) 
@@ -12,7 +13,7 @@
 		echo "第".++$time."輪: ";
     		for ($i = 0; $i < sizeof ($arr); $i++) 
         		echo " ".$arr[$i]." "; 
-    		echo "<br />"; 
+    		echo "<br />".PHP_EOL; 
 	} 
 	function swap(&$x,&$y){
         	$tmp = $x;
@@ -38,23 +39,17 @@
 	// Sorting Algorithms
     	function insertion_sort(&$arr){
     		$counter = 0;
-		$arr_sorted = array ($arr[0]);
-		for ($i = 1; $i < sizeof ($arr); $i++) {
-			for ($j = 0; $j < sizeof ($arr_sorted); $j ++) {
-				if ($arr[$i] < $arr_sorted[$j]) {
-					insert ( $arr_sorted, $j, $arr[$i]);
-					printArray ($arr_sorted, $counter);
-				      	break;	
-				}
-
-			}
-			for ($j = 0; $j < sizeof ($arr_sorted); $j++) {
-				if ($arr[$i] > $arr_sorted[$j]) {
-					insert ( $arr_sorted, $j, $arr[$i]);
-					printArray ($arr_sorted, $counter);
-				      	break;	
-				}
-			}
+		$inner_index;
+		$arr_sorted = array ();
+		for ($outer_index = 0; $outer_index < sizeof ($arr); $outer_index++) {
+			$inner_index = 0;
+			// traverse untill arr > sorted
+			while ( isset ($arr_sorted[$inner_index]) and 
+					$arr [$outer_index] > $arr_sorted[$inner_index] ) 
+				$inner_index ++;
+				
+			insert ( $arr_sorted, $inner_index, $arr[$outer_index]);
+			printArray ($arr_sorted, $counter);
 		}
 	}
     
@@ -80,18 +75,19 @@
 
 			// merge
 			$result = merge ($front_arr, $end_arr);
-			printArray ($result);
+			printArray ($result, $merge_counter);
 			return $result;
 	
 		}
 		$result = array ($arr[$front]);
-		printArray ($result);
+		printArray ($result, $merge_counter);
 		return $result;
 	}
 
     
     if($_POST['send']){
-        $arr = explode(",",$_POST['arr']);
+	$str = $_POST['arr'];
+        $arr = explode(",",$str);
         $arr1 = $arr;
         $arr2 = $arr;
         
@@ -102,4 +98,20 @@
         echo "<br/>Merge sort <br/>";
         merge_sort($arr,0,count($arr)-1);
     }
+	else {
+		$str = "5,2,4,6,1,7,3,10,9,8";
+        	$arr = explode(",",$str);
+        	$arr1 = $arr;
+        	$arr2 = $arr;
+        
+		echo "Insertion sort </br>";
+        	insertion_sort($arr1);
+		echo "<br/>Bubble sort <br/>";
+        	bubble_sort($arr2);
+        	echo "<br/>Merge sort <br/>";
+		$merge_counter=0;
+        	merge_sort($arr,0,count($arr)-1);
+
+		
+	}
 ?>
