@@ -40,8 +40,8 @@
     		$counter = 0;
 		$arr_sorted = array ($arr[0]);
 		for ($i = 1; $i < sizeof ($arr); $i++) {
-			for ($j = 0; $j < $i; $j ++) {
-				if ($arr[$i] > $arr_sorted[$j]) {
+			for ($j = 0; $j < sizeof ($arr_sorted); $j ++) {
+				if ($arr[$i] < $arr_sorted[$j]) {
 					insert ( $arr_sorted, $j, $arr[$i]);
 					printArray ($arr_sorted, $counter);
 				      	break;	
