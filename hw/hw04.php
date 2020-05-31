@@ -46,12 +46,14 @@
 					printArray ($arr_sorted, $counter);
 				      	break;	
 				}
+
+			}
+			for ($j = 0; $j < sizeof ($arr_sorted); $j++) {
 				if ($arr[$i] > $arr_sorted[$j]) {
 					insert ( $arr_sorted, $j, $arr[$i]);
 					printArray ($arr_sorted, $counter);
 				      	break;	
 				}
-
 			}
 		}
 	}
