@@ -5,9 +5,9 @@
 <INPUT type="reset" value="重新輸入"></p>
 </form>
 <?php
-	global $merge_counter;
 	header("Content-Type:text/html;charset=utf-8");
 	// Utility
+	$merge_counter = 0;
 	function printArray(&$arr, &$time) 
 	{ 
 		echo "第".++$time."輪: ";
@@ -21,15 +21,24 @@
 		$y = $tmp;
    	}
 	function merge ($arr1, $arr2) {
+		// init array
 		$arr = array ();
 		$index_arr1 = 0;
 		$index_arr2 = 0;
-		while ($index_arr1+$index_arr2 < sizeof ($arr1)+sizeof ($arr2)) {
-			if ($arr1[$index_arr1] <= $arr2[$index_arr2])
+
+		// merge 2 array
+		while ($index_arr1 < sizeof ($arr1) and $index_arr2 < sizeof ($arr2)) {
+			if ($arr1[$index_arr1] < $arr2[$index_arr2]) 
 				$arr[] = $arr1[$index_arr1++];
 			else
 				$arr[] = $arr2[$index_arr2++];
 		}
+		while ($index_arr1 < sizeof ($arr1))
+			$arr[] = $arr1[$index_arr1++];
+		while ($index_arr2 < sizeof ($arr2))
+			$arr[] = $arr2[$index_arr2++];
+		
+		// return the merged array
 		return $arr;
 	}
 	function insert (&$arr, $insert_position, $element) {
@@ -66,7 +75,8 @@
     	}
     
     	function merge_sort(&$arr,$front,$end){
-    		$mid = floor (($front+$end)/2);
+    		global $merge_counter;
+		$mid = $front + floor (($end-$front)/2);
 		if ($front < $end) {
 			
 			// divide
@@ -75,13 +85,15 @@
 
 			// merge
 			$result = merge ($front_arr, $end_arr);
-			printArray ($result, $merge_counter);
+			PrintArray ($result, $merge_counter);
 			return $result;
 	
 		}
-		$result = array ($arr[$front]);
-		printArray ($result, $merge_counter);
-		return $result;
+		else {
+			$result = array ($arr[$front]);
+			printArray ($result, $merge_counter);
+			return $result;
+		}
 	}
 
     
@@ -98,20 +110,4 @@
         echo "<br/>Merge sort <br/>";
         merge_sort($arr,0,count($arr)-1);
     }
-	else {
-		$str = "5,2,4,6,1,7,3,10,9,8";
-        	$arr = explode(",",$str);
-        	$arr1 = $arr;
-        	$arr2 = $arr;
-        
-		echo "Insertion sort </br>";
-        	insertion_sort($arr1);
-		echo "<br/>Bubble sort <br/>";
-        	bubble_sort($arr2);
-        	echo "<br/>Merge sort <br/>";
-		$merge_counter=0;
-        	merge_sort($arr,0,count($arr)-1);
-
-		
-	}
 ?>
