@@ -32,12 +32,7 @@
 		return $arr;
 	}
 	function insert (&$arr, $insert_position, $element) {
-		$arr_front = array_slice ($arr, 0, $insert_position);
-		$arr_end = array_slice ($arr, $insert_position+1, sizeof ($arr)-1);
-		
-		$arr = array_push ($arr_front, $element);
-		$arr = array_merge ($arr_front, $arr_end);
-		
+		array_splice( $arr, $insert_position, 0, $element );	
 	}
     
 	// Sorting Algorithms
