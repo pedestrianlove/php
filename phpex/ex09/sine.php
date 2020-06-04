@@ -38,6 +38,6 @@
 	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
 
 	// show image and destroy
-	Imagepng ($im);
+	Imagepng ($im, "sine.png");
 	ImageDestroy ($im);
 ?>
