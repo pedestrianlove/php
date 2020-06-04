@@ -6,7 +6,7 @@
 	
 	// init image
 	$image = ImageCreate (100, 50);
-	$bgcolor = ImageColorAllocate ($image, 0, 0, 0);
+	$bgcolor = ImageColorAllocate ($image, 255, 255, 255);
 	
 	$textcolor = ImageColorAllocate ($image, 0, 255, 0);
 	ImageSetPixel ($image, 90, 40, $textcolor);
