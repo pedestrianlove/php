@@ -15,7 +15,7 @@
 	// draw graph
 	$word = "105021226";
 	ImageFill ($image, 0, 0, $bgcolor);
-	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, "FiraCode.ttf", $word);
+	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, "simsun.ttc", $word);
 
 	// show image && destroy
 	Imagepng ($image);
