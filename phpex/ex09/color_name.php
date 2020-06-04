@@ -13,7 +13,7 @@
 	
 
 	// draw graph
-	$word = "105021226";
+	$word = "105021226李智修";
 	ImageFill ($image, 0, 0, $bgcolor);
 	$font_path = "Consolas.ttf";
 	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
