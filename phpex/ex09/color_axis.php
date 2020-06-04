@@ -18,6 +18,6 @@
 	}
 
 	// show graph
-	Imagepng ($image);
+	Imagepng ($image, 'image01.png');
 	ImageDestroy ($image);
 ?>

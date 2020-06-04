@@ -18,6 +18,6 @@
 
 
 	// show image && destroy
-	Imagepng ($image);
+	Imagepng ($image, 'image03.png');
 	ImageDestroy ($image);
 ?>

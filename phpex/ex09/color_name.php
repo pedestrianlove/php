@@ -13,11 +13,11 @@
 	
 
 	// draw graph
+	$word = "105021226";
 	ImageFill ($image, 0, 0, $bgcolor);
-	ImageLine ($image, 0, 0, 600, 400, $textcolor);
-
+	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, "FiraCode.ttf", $word);
 
 	// show image && destroy
-	Imagepng ($image, 'image02.png');
+	Imagepng ($image, 'image04.png');
 	ImageDestroy ($image);
 ?>

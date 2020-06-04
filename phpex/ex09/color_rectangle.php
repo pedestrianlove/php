@@ -14,10 +14,10 @@
 
 	// draw graph
 	ImageFill ($image, 0, 0, $bgcolor);
-	ImageLine ($image, 0, 0, 600, 400, $textcolor);
+	ImageRectangle ($image, 6, 4, 592, 396, $textcolor);
 
 
 	// show image && destroy
-	Imagepng ($image, 'image02.png');
+	Imagepng ($image, 'image04.png');
 	ImageDestroy ($image);
 ?>
