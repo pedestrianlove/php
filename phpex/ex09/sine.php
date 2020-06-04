@@ -9,7 +9,7 @@
 	$x1=0;
 	
 	// create image
-	$im = ImageCreate ($width, $height+500);
+	$im = ImageCreate ($width, $height);
 
 	// assign color
 	$bg_color = ImageColorAllocate ($im, 0, 0, 0); 
@@ -36,7 +36,7 @@
 	$word = "y = sin x";
 	ImageFill ($image, 0, 0, $bgcolor);
 	$font_path = "Consolas.ttf";
-	ImageTTFtext ($image, 64, 0, 0, 850, $textcolor, $font_path, $word);
+	ImageTTFtext ($image, 50, 0, 0, 300, $textcolor, $font_path, $word);
 
 	// show image and destroy
 	Imagepng ($im);
