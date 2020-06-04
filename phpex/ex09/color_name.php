@@ -5,7 +5,7 @@
 	header ("Content-type:image/png");
 	
 	// init image
-	$image = ImageCreate (600, 400);
+	$image = ImageCreate (100, 50);
 	
 	// assign color
 	$bgcolor = ImageColorAllocate ($image, 0, 0, 0);
