@@ -17,6 +17,7 @@
 
 	
 	// draw
+	ImageFill ($im, 0, 0, $bg_color);
 	ImageLine ($im, 0 , $height/2, $width, $height/2, $text_color); // X axis 
 	ImageLine ($im, $width/2-38, 0, $width/2-38, $height, $text_color); // Y axis
 	for($i=1;$i<=($width/$steps);$i++){
