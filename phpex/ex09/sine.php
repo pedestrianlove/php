@@ -34,8 +34,8 @@
 	// draw font
 	$word = "y = sin x";
 	ImageFill ($image, 0, 0, $bgcolor);
-	$font_path = "wt034.ttf";
-	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
+	$font_path = "Consolas.ttf";
+	ImageTTFtext ($image, 32, 0, 50, 50, $textcolor, $font_path, $word);
 
 	// show image and destroy
 	Imagepng ($im);
