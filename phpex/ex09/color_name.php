@@ -9,7 +9,7 @@
 	
 	// assign color
 	$bgcolor = ImageColorAllocate ($image, 0, 0, 0);
-	$textcolor = ImageColorAllocate ($image, 0, 255, 0);
+	$textcolor = ImageColorAllocate ($image, 255, 255, 255);
 	
 
 	// draw graph
