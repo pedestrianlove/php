@@ -13,7 +13,7 @@
 	
 
 	// draw graph
-	$word = iconv ("big5", "UTF-8", "105021226 李智修");
+	$word = "105021226 李智修";
 	ImageFill ($image, 0, 0, $bgcolor);
 	$font_path = "simsun.ttc";
 	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
