@@ -15,7 +15,8 @@
 	// draw graph
 	$word = "105021226";
 	ImageFill ($image, 0, 0, $bgcolor);
-	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, "simsun.ttc", $word);
+	$font_path = "d:/AppServ/www/phpex/ex09/simsun.ttc";
+	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
 
 	// show image && destroy
 	Imagepng ($image);
