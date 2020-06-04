@@ -14,7 +14,7 @@
 
 	// draw graph
 	ImageFill ($image, 0, 0, $bgcolor);
-	ImageFilledEllipse ($image, 300, 300, 300, 300, $textcolor);
+	ImageArc ($image, 300, 300, 300, 300, 0, 360, $textcolor);
 
 
 	// show image && destroy
