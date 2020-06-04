@@ -18,7 +18,7 @@
 	
 	// draw
 	ImageLine ($im, 0 , $height/2, $width, $height/2, $text_color); // X axis 
-	ImageLine ($im, $width/2-35, 0, $width/2-35, $height, $text_color); // Y axis
+	ImageLine ($im, $width/2-36, 0, $width/2-36, $height, $text_color); // Y axis
 	for($i=1;$i<=($width/$steps);$i++){
 
 		$y1=($height/2)-number_format(sin(deg2rad($x1))*90,0);
