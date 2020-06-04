@@ -15,7 +15,7 @@
 	// draw graph
 	$word = "105021226 李智修";
 	ImageFill ($image, 0, 0, $bgcolor);
-	$font_path = "simsun.ttc";
+	$font_path = "wt034.ttf";
 	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
 
 	// show image && destroy
