@@ -17,8 +17,8 @@
 
 	
 	// draw
-	ImageLine ( $im , 0 , $height/2 , $width , $height/2 , $text_color ); // X axis 
-
+	ImageLine ($im, 0 , $height/2, $width, $height/2, $text_color); // X axis 
+	ImageLine ($im, $width/2, 0, $width/2, $height, $text_color); // Y axis
 	for($i=1;$i<=($width/$steps);$i++){
 
 		$y1=($height/2)-number_format(sin(deg2rad($x1))*90,0);
@@ -30,6 +30,14 @@
 
 		$x1=$x2;
 	}
+	
+	// draw font
+	$word = "y = sin x";
+	ImageFill ($image, 0, 0, $bgcolor);
+	$font_path = "wt034.ttf";
+	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, $font_path, $word);
 
-	Imagepng ($im); // image displayed
+	// show image and destroy
+	Imagepng ($im);
+	ImageDestroy ($im);
 ?>
