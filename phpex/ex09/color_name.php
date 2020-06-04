@@ -18,6 +18,6 @@
 	ImageTTFtext ($image, 32, 0, 0, 50, $textcolor, "FiraCode.ttf", $word);
 
 	// show image && destroy
-	Imagepng ($image, 'image05.png');
+	Imagepng ($image);
 	ImageDestroy ($image);
 ?>
