@@ -14,10 +14,10 @@
   }
   else
   {
- 	$msg = "您所輸入的驗證碼錯誤！請回上一頁重新輸入。 ";
-	exit();
+ 	echo $msg = "您所輸入的驗證碼錯誤！請回上一頁重新輸入。 ";
+  	header("location:index.php");
+	
   }
-  echo $msg;
   
   
   //建立資料連接
