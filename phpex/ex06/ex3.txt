@@ -2,4 +2,9 @@ select * from `user` where user.name="侯小諭";
 select * from `user` order by year asc, month asc, day asc;
 select * from `user` where user.sex="男";
 update user set year=1987, month=11, day=20 where serial=5;
-
+select * from `user` order by year asc, month asc, day asc limit 1;
+select * from `user` order by year desc, month desc, day desc limit 1;
+select * from `user` where year between 1983 and 1987;
+select * from user where 2010-year between 20 and 25;
+DELETE FROM user WHERE user.sex="男";
+select concat (year,'-',month,'-',day) as birthday from user;
