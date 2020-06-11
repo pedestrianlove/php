@@ -15,7 +15,7 @@
   else
   {
  	echo $msg = "您所輸入的驗證碼錯誤！請回上一頁重新輸入。 ";
-  	header("location:index.php");
+  	header("location:../index.php");
 	
   }
   
@@ -32,6 +32,6 @@
   mysqli_close($link);
 
   //將網頁重新導向到 index.php
-  header("location:index.php");
+  header("location:../index.php");
   exit();
 ?>
