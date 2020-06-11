@@ -39,6 +39,10 @@
           <td width="15%">內容</td>
           <td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
         </tr>
+	<tr bgcolor="84D7FF">
+	  <td width="15%">驗證碼<img src="showrandimg.php" id="rand-img"></td>
+          <td width="85%"><input type="text" name="checknum" id="checknum"></td>
+	</tr>
         <tr>
           <td colspan="2" align="center">
             <input type="button" value="張貼留言" onClick="check_data()">　

@@ -1,0 +1,5 @@
+select * from `user` where user.name="侯小諭";
+select * from `user` order by year asc, month asc, day asc;
+select * from `user` where user.sex="男";
+update user set year=1987, month=11, day=20 where serial=5;
+

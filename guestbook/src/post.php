@@ -5,7 +5,21 @@
   $subject = $_POST["subject"];
   $content = $_POST["content"];
   $current_time = date("Y-m-d H:i:s");
-
+  
+  // CAPTCHA
+  Session_start();
+  if( $_SESSION["Checknum"] == $_POST['checknum'] )
+  {
+  	$msg = "您所輸入的驗證碼正確！";
+  }
+  else
+  {
+ 	$msg = "您所輸入的驗證碼錯誤！請回上一頁重新輸入。 ";
+	exit();
+  }
+  echo $msg;
+  
+  
   //建立資料連接
   $link = create_connection();
 
